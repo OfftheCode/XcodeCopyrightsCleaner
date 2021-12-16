@@ -20,7 +20,7 @@ print("Creating empty source file 🏗\n")
 Dir.chdir SWIFT_TEMPLATE_PATH
 Dir.mkdir SWIFT_COPYRIGHTS_FOLDER
 
-FileUtils.cp_r(SWIFT_FILE_FOLDER, SWIFT_COPYRIGHTS_FOLDER)
+FileUtils.cp_r("#{SWIFT_FILE_FOLDER}/.", SWIFT_COPYRIGHTS_FOLDER)
 
 Dir.chdir SWIFT_FILE_FOLDER
 File.open(SWIFT_TEMPLATE_NAME, 'w') { |file| file.write('import Foundation') }
